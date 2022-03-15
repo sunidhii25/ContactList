@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>
+        <%= locals.title %>
+    </title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <div id="headers">
+    <h1 id="page-heading"><i class="fas fa-address-book"></i> Contact List</h1>
+
+    <div id="search">
+        <form action="/search-contact" method="POST">
+            <input id="name-area" type="text" name="name" placeholder="Enter name">
+            <button id="search-btn" type="submit"><i class="fas fa-search"></i></button>
+
+        </form>
+    </div>
+</div>
+
+    <div>
+        <ul type="none">
+            <% for(let i of contact_list) {%>
+                <li>
+                    <div id="contact">
+                        <div id="contact-name">
+                            <p>
+                                <%= i.name %>
+                            </p>
+                        </div>
+                        <div id="contact-mail">
+                            <p>
+                                <%= i.email %>
+                            </p>
+                        </div>
+                        <div id="contact-no">
+                            <p>
+                                <%= i.phone %>
+                            </p>
+                        </div>
+                        <div id="delete-btn">
+                            <a href="/delete-contact/?id=<%= i._id %>&name=<%= i.name %>">
+                                <i class="fas fa-window-close"></i>
+                            </a>
+                            <a href="./updateContact/?id=<%= i._id %>">
+                                <i class="far fa-edit"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+
+    <div id="form">
+        <a href="./addContact">
+            <button id="add-btn" type="submit">Add Contact</button>
+        </a>
+    </div>
+
+
+    <script type="text/javascript" src="/js/home.js"></script>
+</body>
+
+</html>

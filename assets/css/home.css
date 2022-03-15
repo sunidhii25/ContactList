@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+#headers{
+    display: flex;
+    width:700px;
+    margin:auto;
+    justify-content: space-between;
+    align-items: center;
+}
+#search{
+    margin-top: 30px;
+}
+#search-btn{
+    height:30px;
+}
+#page-heading{
+    text-align: center;
+    margin-top: 30px;
+    color: purple;
+}
+#contact{
+    align-items: center;
+    background-color: lightgrey;
+    padding:15px;
+    margin:auto;
+    width:650px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+#contact-name{
+    width: 200px;
+}
+#contact-mail{
+    width: 220px;
+}
+#delete-btn{
+    font-size: 20px;
+}
+.fa-window-close{
+    color:white;
+}
+#form{
+    margin-top:2rem;
+    margin-left:30%;
+
+}
+#name-area, #number-area, #email-area{
+    height: 30px;
+}
+
+
+#add-btn{
+    height: 30px;
+
+}
+.far, .fa-edit{
+    margin-left:5px;
+    color:black;
+    border:none;
+}

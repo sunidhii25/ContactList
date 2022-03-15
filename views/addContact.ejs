@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/addContact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Add Your Contact</h1>
+
+    <div id="form">
+        <form action="/create-contact" method="POST">
+            <div id="input-area">
+                <input id="name-area" type="text" name="name" placeholder="Enter name" required>
+                <input id="number-area" type="tel" name="phone" placeholder="Enter phone" pattern="[0-9]{10}"
+                    required>
+                <input id="email-area" type="email" name="email" placeholder="Enter email" required>
+            </div>
+            <button id="add-btn" type="submit">Add Contact</button>
+        </form>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/updateContact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Update Contact</h1>
+
+    
+    <div id="form">
+        <% for(let i of contact) {%>
+        <form action="/update-contact/?id=<%= i.id %>" method="POST">
+            
+            <div id="input-area">
+                <input id="iddd-area" type="text" name="id" value="<%= i._id %>" disabled>
+                <input id="name-area" type="text" name="name" value="<%= i.name %>" required>
+                <input id="number-area" type="tel" name="phone" value="<%= i.phone %>" pattern="[0-9]{10}"
+                    required>
+                <input id="email-area" type="email" name="email" value="<%= i.email %>" required>
+            </div>
+            <% } %>
+            <button id="add-btn" type="submit">Update</button>
+        </form>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+body{
+    font-family:  sans-serif;
+}
+h1{
+    text-align: center;
+    color:rebeccapurple;
+}
+#form{
+    margin-left: 30%;
+}
+#input-area{
+    display: flex;
+    flex-direction: column;
+    margin-left:10%;
+}
+#name-area, #number-area, #email-area{
+    width: 400px;
+    border: none;
+    margin-top: 4rem;
+    border-bottom: 2px solid black;
+    height: 30px;
+}
+#add-btn{
+    height: 30px;
+    width: 100px;
+    margin-top: 30px;
+    margin-left:25%;
+}
